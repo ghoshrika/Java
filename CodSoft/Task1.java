@@ -1,9 +1,11 @@
 import java.util.*;
 
 class GuessNumber{
-    public int randomNumber;
-    public int numberOfAttempts = 0;
-    public int playerGuess;
+    private int randomNumber;
+    private int numberOfAttempts = 0;
+    private int playerGuess;
+    private int minNum = 1;
+    private int maxNum = 100;
 
     //getter setter method for numberOfAttempts
     public void setNumberOfAttempts(int numberOfAttempts){
@@ -15,8 +17,6 @@ class GuessNumber{
 
     // creating a constructor to generate random number
     GuessNumber(){
-        int minNum = 1;
-        int maxNum = 100;
         Random r = new Random();
         this.randomNumber = r.nextInt(maxNum - minNum + 1) + minNum;
     }
